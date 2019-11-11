@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="selection">
+            <h1>
+                Weather Forecast
+                
+            </h1>
+            <div>
+                <select id="selectedCity">
+                    <option value="Montreal,ca">Montreal</option>
+                    <option value="Vancouver,ca">Vancouver</option>
+                    <option value="London,ca">London</option>
+                    <option value="Toronto,ca">Toronto</option>
+                </select>
+                <select id="tempType">
+                    <option value="°C">celsius</option>
+                    <option value="°F">fahrenheit</option>
+                </select>
+
+            </div>
+            <button type="button" id="btnSubmit"> Search</button>
+
+        </section>
+
+        <section id="current">
+            <h2>Current Weather</h2>
+            <h3><span class="cityName"></span></h3>
+            <p class="temperature">Temperature is <span class="val"></span></p>
+            <p class="description">Sky is <span class="val"></span></p>
+            <p class="icon"><img src="" alt="" class="val" /></p>
+        </section>
+        <section id="forecast">
+            <h2>Weather forecast</h2>
+            <div id="info_panel">
+                <ul>
+                </ul>
+            </div>
+            <div id="data_panel">
+                <table id="tb_forecast">
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Temp</th>
+                            <th>Icon</th>
+                            <th>Desc.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="model">
+                            <td class="hour"></td>
+                            <td class="temperature">
+
+                            </td>
+                            <td class="icon"><img src="" alt="" /></td>
+                            <td class="description"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
