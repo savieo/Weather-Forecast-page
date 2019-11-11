@@ -19,7 +19,6 @@ const CONV = {
         let date = new Date(dt * 1000);
         return ("0" + date.getHours()).substr(-2) + "h" + (date.getMinutes() + "0").substr(0, 2);
     }
-
 }
 
 /**
@@ -60,8 +59,8 @@ document.querySelector("#forecast ").style.display = "none";
 let submitButton = document.querySelector("#btnSubmit");
 submitButton.addEventListener('click', function () {
     //Unhiding the current weather and forecast sections
-    document.querySelector("#current ").style.display ="block";
-    document.querySelector("#forecast ").style.display ="block";
+    document.querySelector("#current ").style.display = "block";
+    document.querySelector("#forecast ").style.display = "block";
     let city = document.querySelector("#selectedCity").value;
     let tempType = document.querySelector("#tempType").value;
 
@@ -78,7 +77,7 @@ submitButton.addEventListener('click', function () {
             if (tempType === "°C") {
                 document.querySelector(".temperature .val").textContent = CONV.k_a_c(data.main.temp);
             } else if (tempType === "°F") {
-                document.querySelector(".temperature .val").textContent = CONV.k_a_f(data.main.temp) ;
+                document.querySelector(".temperature .val").textContent = CONV.k_a_f(data.main.temp);
             }
             document.querySelector(".description .val").textContent = data.weather[0].description;
             document.querySelector(".icon img").src = OW_API.get_icon_url(data.weather[0].icon);
@@ -161,5 +160,3 @@ table.style.width = 100 + '%';
 table.style.textAlign = "center";
 document.querySelector("thead").style.color = "White";
 document.querySelector("thead").style.backgroundColor = "darkred";
-
-
